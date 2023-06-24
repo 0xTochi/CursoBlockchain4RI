@@ -25,9 +25,6 @@ curcl http://127.0.0.1:8000/get_chain
 ```
 y se obtiene un resuultado como el siguiente
 
-**mine_block**
-
-Permite minar un nuevo bloque.
 ```
 {
 	"chain": [
@@ -51,5 +48,24 @@ Permite minar un nuevo bloque.
 		}
 	],
 	"length": 3
+}
+```
+
+**mine_block**
+
+Permite minar un nuevo bloque. Similar al anterior, se usa el comando
+```
+curcl http://127.0.0.1:8000/mine_block
+```
+
+Con un resultado
+
+```
+{
+	"message": "Congratulations, you just mined a block!",
+	"index": 3,
+	"timestamp": "2023-06-24 04:38:36.918888",
+	"proof": 45293,
+	"previous_hash": "4470f73a2a6e3facdea049705eba47f6e32b75db05d37a27ec44dbd034ec9057"
 }
 ```
