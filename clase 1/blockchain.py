@@ -27,7 +27,7 @@ class Blockchain:
         while check_proof is False:
             ## Hash: Complejidad del problema
             hash_operation = hashlib.sha256(str(new_proof**2 - previous_proof**2).encode()).hexdigest()
-            if hash_operation[:4] == '0000':
+            if hash_operation[:3] == '000':
                 check_proof = True
             else:
                 new_proof += 1
